@@ -54,11 +54,11 @@ const styles = StyleSheet.create({
   imgHeader: {
     width: 283,
     height: 67,
-    left: 38,
-    top: 230,
+    left: 50,
+    top: 320,
   },
   content: {
-    marginTop: 535,
+    marginTop: 650,
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "row",
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     height: 30,
     left: 38,
     right: 228,
-    top: 570,
+    top: 670,
     bottom: 131,
     fontFamily: "Lato-Regular",
     fontStyle: "normal",
