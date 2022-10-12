@@ -118,23 +118,57 @@ export default HomeScreen = ({ navigation }) => {
                 },
               ])
             }
-          ></TouchableOpacity>
-          <Image source={dokter} style={styles.gambar2} />
+          >
+            <Image source={dokter} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Telemedicine</Text>
         </View>
         <View style={styles.column}>
-          <Image source={fasilitas} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }
+          >
+            <Image source={fasilitas} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Healthcare Facility</Text>
         </View>
       </View>
 
       <View style={styles.row1}>
         <View style={styles.column}>
-          <Image source={statistic} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }
+          >
+            <Image source={statistic} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Covid-19 Statistic</Text>
         </View>
         <View style={styles.column}>
-          <Image source={hospital} style={styles.gambar2} />
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }
+          >
+            <Image source={hospital} style={styles.gambar2} />
+          </TouchableOpacity>
           <Text style={styles.tulisan}>Find Hospital Bed</Text>
         </View>
         <View style={styles.column}></View>
