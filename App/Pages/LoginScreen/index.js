@@ -9,14 +9,7 @@ import {
   TextInput,
   Alert,
 } from "react-native";
-import {
-  L_peduli,
-  kpc,
-  kominfo,
-  kemenkes,
-  bumn,
-  logokotak,
-} from "../../assets";
+import { kpc, kominfo, kemenkes, bumn, logokotak } from "../../assets";
 import { PrimaryButton } from "../../Componets";
 
 export default LoginScreen = ({ navigation }) => {

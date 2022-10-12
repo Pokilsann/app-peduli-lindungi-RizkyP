@@ -6,14 +6,15 @@ import {
   Image,
   Dimensions,
   Alert,
-  TouchableOpacity,
+  Linking,
 } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 import {
   bel,
   user,
   hand,
-  panah,
+  centang,
   scan,
   vaksin,
   covid,
@@ -30,12 +31,10 @@ const windowHeight = Dimensions.get("window").height;
 export default HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.bgMainApp}>
-      <View style={styles.headerImg}></View>
-
       <View style={styles.container}>
         <Image source={user} style={styles.imgSize} />
         <Text style={styles.hi}>Hi, </Text>
-        <Text style={styles.kesit}>Kesit Wijanarko</Text>
+        <Text style={styles.nama}>Rizky Priambodo</Text>
         <Image source={bel} style={styles.imgSize2} />
       </View>
 
@@ -55,7 +54,7 @@ export default HomeScreen = ({ navigation }) => {
 
       <View style={styles.kotakPutih}>
         <View style={styles.row}>
-          <Image source={panah} style={styles.panah} />
+          <Image source={centang} style={styles.panah} />
           <Text style={styles.fonthitam}>Check-In Prefence</Text>
         </View>
         <View style={styles.kotakcheck}>
@@ -72,23 +71,21 @@ export default HomeScreen = ({ navigation }) => {
 
       <View style={styles.row}>
         <View style={styles.column}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate("ImunizationScreen")}
-          >
+          <TouchableOpacity onPress={() => navigation.navigate("Imunisasi")}>
             <Image source={vaksin} style={styles.gambar2} />
           </TouchableOpacity>
           <Text style={styles.tulisan}>Vaccine and Immunization</Text>
         </View>
         <View style={styles.column}>
           <TouchableOpacity
-            onPress={() => navigation.navigate("CovidTextScreen")}
+            onPress={() => navigation.navigate("CovidTestScreen")}
           >
             <Image source={covid} style={styles.gambar2} />
           </TouchableOpacity>
           <Text style={styles.tulisan}>Covid-19 Test Results</Text>
         </View>
         <View style={styles.column}>
-          <TouchableOpacity onPress={() => navigation.navigate("EhacScreen")}>
+          <TouchableOpacity onPress={() => navigation.navigate("Ehac")}>
             <Image source={EMAC} style={styles.gambar2} />
           </TouchableOpacity>
           <Text style={styles.tulisan}>EHAC</Text>
@@ -112,7 +109,16 @@ export default HomeScreen = ({ navigation }) => {
           <Text style={styles.tulisan}>Travel Regulations</Text>
         </View>
         <View style={styles.column}>
-          Covid
+          <TouchableOpacity
+            onPress={() =>
+              Alert.alert("Peringatan!!!", "Halaman ini Belum Dibuat", [
+                {
+                  text: "ok",
+                  onPress: () => console.log("ok ditekan"),
+                },
+              ])
+            }
+          ></TouchableOpacity>
           <Image source={dokter} style={styles.gambar2} />
           <Text style={styles.tulisan}>Telemedicine</Text>
         </View>
@@ -217,7 +223,7 @@ const styles = StyleSheet.create({
     left: 15,
     fontWeight: "bold",
   },
-  kesit: {
+  nama: {
     textAlign: "left",
     fontSize: 15,
     marginTop: 4,
@@ -263,7 +269,7 @@ const styles = StyleSheet.create({
   logo1: {
     resizeMode: "contain",
     height: 60,
-    marginLeft: -35,
+    marginLeft: -20,
     top: -15,
     flex: 0,
   },

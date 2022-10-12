@@ -19,6 +19,13 @@ import dokter from "./img/ic_telemedicine.jpg";
 import fasilitas from "./img/ic_healthcare_facility.jpg";
 import statistic from "./img/ic_statistic_covid.jpg";
 import hospital from "./img/ic_find_hospital.jpg";
+import logoempty from "./img/ic_empty.jpg";
+import checkinlogo from "./img/ic_check_in.jpg";
+import childlogo from "./img/ic_child.jpg";
+import covidlogo from "./img/ic_covid.jpg";
+import bgtopehac from "./img/bg_ehac.jpg";
+import myehac from "./img/ic_my_ehc.jpg";
+import crtehac from "./img/ic_create_ehc.jpg";
 
 export {
   L_peduli,
@@ -41,4 +48,11 @@ export {
   fasilitas,
   statistic,
   hospital,
+  logoempty,
+  checkinlogo,
+  childlogo,
+  covidlogo,
+  bgtopehac,
+  myehac,
+  crtehac,
 };
